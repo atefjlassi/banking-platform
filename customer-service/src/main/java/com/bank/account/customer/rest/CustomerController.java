@@ -1,7 +1,7 @@
-package com.bank.customer.rest;
+package com.bank.account.customer.rest;
 
-import com.bank.customer.entities.Customer;
-import com.bank.customer.repositories.CustomerRepository;
+import com.bank.account.customer.entities.Customer;
+import com.bank.account.customer.repositories.CustomerRepository;
 import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

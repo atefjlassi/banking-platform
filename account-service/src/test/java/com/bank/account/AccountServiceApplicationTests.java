@@ -1,10 +1,10 @@
-package com.bank;
+package com.bank.account;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class GatewayServiceApplicationTests {
+class AccountServiceApplicationTests {
 
   @Test
   void contextLoads() {

@@ -1,7 +1,7 @@
-package com.bank.customer;
+package com.bank.account.customer;
 
-import com.bank.customer.entities.Customer;
-import com.bank.customer.repositories.CustomerRepository;
+import com.bank.account.customer.repositories.CustomerRepository;
+import com.bank.account.customer.entities.Customer;
 import java.util.List;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
