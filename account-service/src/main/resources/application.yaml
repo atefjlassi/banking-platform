@@ -7,7 +7,7 @@ spring:
 
   cloud:
     discovery:
-      enabled: false
+      enabled: true
     config:
       enabled: false
   datasource:
@@ -16,3 +16,15 @@ spring:
     console:
       enabled: true
 
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
