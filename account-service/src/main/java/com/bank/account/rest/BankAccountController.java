@@ -26,8 +26,10 @@ public class BankAccountController {
     @GetMapping("/accounts")
     public List<BankAccount> accountList() {
         List<BankAccount> accounts = this.bankAccountRepository.findAll();
-
-
+        accounts.forEach(bankAccount -> {
+            Customer customer = this.customerClient.findCustomerById(bankAccount.getCustomerId());
+            bankAccount.setCustomer(customer);
+        });
         return accounts;
     }
 
