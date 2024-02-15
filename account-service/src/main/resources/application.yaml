@@ -4,27 +4,9 @@ server:
 spring:
   application:
     name: account-service
+  config:
+    import: optional:configserver:http://localhost:9999 # server from were to get the rest of configuration
 
-  cloud:
-    discovery:
-      enabled: true
-    config:
-      enabled: false
-  datasource:
-    url: jdbc:h2:mem:account-db
   h2:
     console:
       enabled: true
-
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
