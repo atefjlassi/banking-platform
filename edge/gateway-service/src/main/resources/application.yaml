@@ -3,3 +3,12 @@ management:
     web:
       exposure:
         include: "*"
+
+spring:
+  cloud:
+    discovery:
+      enabled: true
+    config:
+      enabled: true # demand the rest of configuration from the config server
+  config:
+    import: optional:configserver:http://localhost:9999 # server from were will grep the configuration

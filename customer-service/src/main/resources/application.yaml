@@ -8,7 +8,9 @@ spring:
     discovery:
       enabled: true
     config:
-      enabled: false
+      enabled: true # demand the rest of configuration from the config server
+  config:
+    import: optional:configserver:http://localhost:9999 # server from were will grep the configuration
   datasource:
     url: jdbc:h2:mem:customer-db
   h2:
@@ -25,4 +27,4 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: "*" # health, refresh: is what we need 
